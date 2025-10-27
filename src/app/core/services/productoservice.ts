@@ -15,4 +15,8 @@ export class Productoservice {
 
     return this.http.get<any[]>(this.base);
   }
+  // Recibe un objeto 'producto' y lo envía vía POST -----------
+  crearProducto(producto: any): Observable<any> {
+    return this.http.post<any>(this.base, producto);
+  }
 }
